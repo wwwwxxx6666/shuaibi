@@ -1,24 +1,17 @@
-# shuaibi
+# 城市气象污染数据可视化项目
 
-## Project setup
-```
-npm install
-```
+该项目是一个用于展示城市气象污染数据的可视化项目。项目使用Vue框架和Echarts、D3等库来实现数据可视化功能。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 功能特点
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### TODO
+- [ ] 展示城市气象污染数据的实时监测结果
+- [ ] 提供多种数据可视化图表，包括折线图、柱状图、地图等
+- [ ] 支持用户自定义数据筛选和展示方式
+- [ ] 提供数据下载和导出功能
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 技术栈
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Vue.js：用于构建前端界面和组件
+- Echarts：用于绘制各种数据可视化图表
+- D3.js：用于处理和转换数据

@@ -35,9 +35,21 @@ function drawChart(data) {
     var myChart = echarts.init(document.getElementById('timechange'));
 
     // 配置图表的选项
+    //TODO: 修复tooltip值和颜色对应问题
     var option = {
         tooltip: {
-            trigger: 'axis'
+            trigger: 'axis',
+            formatter: function(params) {
+                var tooltipContent = '';
+                for (var i = 0; i < params.length; i++) {
+                  var seriesName = params[i].seriesName; // 获取折线系列的名称
+                  var color = params[i].color; // 获取折线的颜色
+                  var value = params[i].value; // 获取折线上的值
+                   tooltipContent += '<span style="display:inline-block;margin-right:5px;border-radius:50%;width:10px;height:10px;background-color:' + color + '"></span>' + seriesName + ': ' + value + '<br>'; // 在 tooltip 中显示圆点、折线的名称、值和颜色
+                }
+                return tooltipContent;
+              }
+           
         },
         legend: {
             data: ['PM2.5', 'PM10', 'CO', 'NO2', 'SO2', 'O3']
